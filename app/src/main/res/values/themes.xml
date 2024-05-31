@@ -5,6 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="btn_theme" parent="Theme.AppCompat.NoActionBar"></style>
     <style name="Theme.ExamGPT" parent="Base.Theme.ExamGPT" />
     <style name="circleImageView" parent="">
         <item name="cornerFamily">rounded</item>

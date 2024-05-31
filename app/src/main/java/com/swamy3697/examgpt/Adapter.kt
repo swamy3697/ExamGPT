@@ -1,6 +1,7 @@
 package com.swamy3697.examgpt
 
 import android.app.ActionBar.LayoutParams
+import android.app.Application
 import android.icu.text.ListFormatter
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 
@@ -44,10 +46,11 @@ class Adapter(private val items: MutableList<MessageResponses>): RecyclerView.Ad
             holder.user.text="ExamGPT"
             holder.textResponses.width=LayoutParams.WRAP_CONTENT
             holder.icon.setImageResource(R.drawable.icon)
+            holder.textResponses.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.white))
 
         }
-       // holder.messageParent.layoutParams=layoutParams
     }
+
     fun insertUserPromt(promt:MessageResponses){
         items.add(promt)
         notifyItemInserted(items.size - 1)
